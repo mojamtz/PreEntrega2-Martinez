@@ -28,7 +28,7 @@
 
 .nav__bar{
     grid-area: nav;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -167,6 +167,8 @@
 .button__container{
 /*     outline: solid blue;
  */    width: 20%;
+    display: flex;
+    justify-content: center;
 }
 
 button{
@@ -336,11 +338,17 @@ button:hover{
     }
 
 
-
     button{
         padding: 1px 3px;
         font-size: smaller;
     }
+
+    .col-lg-3{
+        display: flex;
+        justify-content: center;
+    }
+
+
 
 }
 
