@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.grid__container{
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "title model model infos"
+    "disc disc disc disc"
+    "mint mint mint mint";
+    text-align: center;
+/*     outline: solid red;
+ */}
+
+
+
+.grid__container > div{
+    /* outline: solid green; */
+}
+
+.nav__bar{
+    grid-area: nav;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+
+
+
+.nav__bar li:hover{
+    font-weight: bolder;
+}
+
+.item2{
+    grid-area: title;
+    height: 70vh;
+/*     outline: solid red;
+ */    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: black;
+    
+}
+
+.item2 .subtitle__container{
+/*     outline: solid purple;
+ */    max-width: fit-content;
+    height: 30%;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item2 .title__container{
+    max-width: fit-content;
+/*     outline: solid green;
+ */    height: 30%;
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.item2 .legend__container{
+    max-width: fit-content;
+/*     outline: solid green;
+ */    height: 30%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title__container span{
+    font-style: italic;
+    animation-name: aparecer;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+
+.item3{
+    grid-area: model;
+    position: relative;
+}
+
+.infos{
+    grid-area: infos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+
+}
+
+.disc{
+    grid-area: disc;
+}
+
+.mint{
+    grid-area: mint;
+}
+
+.logo__container{
+/*     outline: solid red;
+ */    width: 20%;
+/*     outline: solid red;
+ */    display: flex;
+    justify-content: center;
+}
+.logo__container a{
+/*     outline: solid green;
+ */    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__container img{
+    width: 30px;
+}
+
+.main__links ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+/*     outline: solid salmon;
+ */    list-style-type: none;
+}
+
+.main__links a{
+    color: white;
+    text-decoration: none;
+}
+
+.main__links{
+/*     outline: solid purple;
+ */    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.button__container{
+/*     outline: solid blue;
+ */    width: 20%;
+}
+
+button{
+    background-color: rgb(92, 0, 212);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    border-style: none;
+    font-weight: bolder;
+    transition: background-color 0.5s;
+}
+
+button:hover{
+    background-color: rgb(153, 75, 255);
+}
+
+
+.long__message{
+/*     outline: solid aqua;
+ */    max-width: fit-content;
+    height: 100%;
+    width: 80%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tapa{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+}
+
+.disc{
+/*     outline: solid red;
+ */    text-align: center;
+    padding: 3vh;
+    font-weight: bolder;
+    background-color: rgb(37, 37, 37);
+    color: white;
+
+}
+
+.logo__mint img{
+    height: 7vh;
+}
+
+.logo__mint{
+    padding: 3vh;
+
+}
+
+.mint{
+    background-image: url("../images/halftone_background_12.jpg");
+    background-size: cover;
+}
+
+.blocks__container{
+    display: flex;
+    justify-content: center;
+    
+    padding: 4%;
+}
+
+.blocks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.block{
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 90px;
+    padding: 5px;
+/*     padding: 10px 50px;
+ */    border-radius: 10px;
+    font-weight: bolder;
+    font-size: larger;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: scale 0.5s;
+}
+
+.block:hover{
+    scale: 120%;
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 100%;}
+
+    50%{
+        opacity:0%;
+    }
+
+    100%{
+        opacity:100%;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .grid__container{
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "title"
+        "model"
+        "model"
+        "infos"
+        "disc"
+        "mint";
+        text-align: center;
+    }
+
+    .long__message{
+        font-size: 13px;
+        padding-bottom: 20px;
+    }
+
+    .item2{
+        height: 40vh;
+    }
+
+    .item2 .subtitle__container{
+        height: 5%;
+        font-size: small;
+    }
+
+    .item2 .title__container{
+        height: 5%;
+        font-size: small;
+    }
+
+    .item3{
+        height: 60vh;
+    }
+
+    .disc{
+        font-size: small;
+    }
+
+    .logo__container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo__container img{
+        height: 3vh;
+        width: 3vh;
+    }
+
+    .main__links{
+        font-size: small;
+    }
+
+    .button__container{
+        padding: 0;
+    }
+
+
+
+    button{
+        padding: 1px 3px;
+        font-size: smaller;
+    }
+
+}
+
+/* BOOTSTRAP STUFF */
+
+
+
+.container-fluid{
+/*     outline: solid green;
+ */}
+
+.explanation{
+/*     outline: solid green;
+ */    padding: 2vh;
+    background-image: url(../images/aboutusbannerbg.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.col-3{
+/*     outline: solid blue;
+ */    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-lg-9{
+/*     outline: solid purple;
+ */    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    background: linear-gradient(-45deg, #612e1e, #581630, #135b75, #0c614d);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.founders__info{
+/*     outline: solid red;
+ */    background-image: url(../images/halftone_background_12.jpg);
+    background-size: cover;
+}
+
+.logo__container img{
+    transition: scale 0.5s;
+
+}
+
+.logo__container img:hover{
+    scale: 120%;
+}
+
+.founders__info img{
+    height: 20vh;
+    border-radius: 20px;
+    margin: 10px;
+    transition: scale 0.5s;
+}
+
+.member__name{
+/*     outline: solid aqua;
+ */    font-size: x-large;
+}
+
+.founder1{
+    padding: 3vh;
+/*     outline: solid red;
+ */}
+
+.founders__info img:hover{
+    scale: 120%;
+}
+
+.fade-up{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
